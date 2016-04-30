@@ -1,0 +1,44 @@
+<div class="container">
+        <div class="row">
+          <div class="col-md-3">
+              <a id="logout" ng-click="logout()" ng-controller="LoginController">logout</a>
+            <div>
+                
+            </div>
+          </div>
+          <div class="col-md-6 logo">
+            <img src="images/ark_logo.png" width="300px" />
+            <h1>Server Manager<h1>
+          </div>
+          <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Memory (Target ± {{memoryTarget}} MB)</h3>
+              </div>
+              <div class="panel-body memory">
+                <span ng-class="{'glyphicon glyphicon-off': !memory || memory == 0,
+                'glyphicon glyphicon-hourglass': memory > 0 && memory < memoryTarget,
+                'glyphicon glyphicon-thumbs-up': memory >= memoryTarget}"
+                title="{{ memory >= memoryTarget ? 'Server is up' :
+                memory > 0 && memory < memoryTarget ? 'Server is starting':
+                'Server is down'}}" ></span>
+                <span ng-show="memory"> {{memory}} MB</span>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row commandButtons">
+            <button type="button" class="btn btn-success" title="The following actions will be executed: If configured, a backup will be done first, then an update of Ark Server will be executed and afterwards the server will be started." ng-click="startServer()">Start</button>
+            <button type="button" class="btn btn-warning" title="Stops the server via a usual kill command." ng-click="stopServer()">Stop</button>
+            <button type="button" class="btn btn-info" title="The following actions will be executed: If configured, a backup will be done first, then an update of Ark Server will be executed" ng-click="updateServer()">Update</button>
+            <button type="button" class="btn btn-danger" title="Stops the server via a forced kill -9 command. This is i.e. required when you want to stop server while it is starting." ng-click="forceStopServer()">Force Stop</button>
+            <button type="button" class="btn btn-primary" title="Configuration of your server paths, passwords, etc can be done here." ng-click="openConfig()">Configuration</button>
+        </div>
+        <div class="row">
+            <textarea id="log" rows="20" ng-model="log"></textarea>
+        </div>
+    </div>
+</div>
+</div>

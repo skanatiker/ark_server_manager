@@ -1,0 +1,24 @@
+<div class="container">
+	<div class="row">
+	  <div class="col-md-12 logo">
+	    <img src="images/ark_logo.png" width="300px" />
+	    <h1>Server Manager<h1>
+	  </div>
+	  <div class="col-md-12 login">
+		<form id="login" ng-submit="login()">
+			<p class="error" ng-show="error">{{error}}</p>
+			<div class="input-group">
+			  <span class="input-group-addon" id="userlabel">Username</span>
+			  <input type="text" class="form-control" name="username" ng-model="username" placeholder="Username" aria-describedby="userlabel">
+			</div>
+			<div class="input-group">
+			  <span class="input-group-addon" id="pwdlabel">Password</span>
+			  <input type="password" class="form-control" name="password" ng-model="password" placeholder="Password" aria-describedby="pwdlabel">
+			</div>
+			<div class="offset">
+				<input class="btn btn-primary" type="submit" value="Login"/>
+			</div>
+		</form>
+	  </div>
+	</div>
+</div>

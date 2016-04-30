@@ -1,0 +1,57 @@
+<div class="modal-header">
+  <button type="button" class="close" ng-click="close()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <h4 class="modal-title" id="configLabel">Configuration</h4>
+</div>
+<div class="modal-body configBody">
+  <p class="error" ng-show="error">{{error}}</p>
+  <div class="input-group" title="The used memory can indicate, whether the ark server is up. It can change from game update to update. Currently it seems to be ±4700 MB.">
+    <span class="input-group-addon" id="memoryTargetLabel"
+    >Memory Target (MB) *</span>
+    <input type="text" class="form-control" name="memoryTarget" ng-model="server.memoryTarget" 
+    placeholder="Memory Target" aria-describedby="memoryTargetLabel" required>
+  </div>
+  <div class="input-group" title="Set the path where the Ark server is installed to. It is required for starting the server.">
+    <span class="input-group-addon" id="arkServerPathLabel">Ark Server Path *</span>
+    <input type="text" class="form-control" name="arkServerPath" ng-model="server.arkServerPath" placeholder="Ark Server Path" aria-describedby="arkServerPathLabel" required>
+  </div>
+  <div class="input-group" title="Set the path where steamcmd has been installed to. It is required for updating the server.">
+    <span class="input-group-addon" id="steamCmdLabel">SteamCmd Path *</span>
+    <input type="text" class="form-control" name="steamCmdPath" ng-model="server.steamCmdPath" placeholder="Path, where steamcmd.sh is located" aria-describedby="steamCmdLabel" required>
+  </div>
+  <div class="input-group" title="Set the name of your Ark server.">
+    <span class="input-group-addon" id="serverNameLabel">Ark Server Name *</span>
+    <input type="text" class="form-control" name="serverName" ng-model="server.serverName" placeholder="The name of your ark server" aria-describedby="serverNameLabel" required>
+  </div>
+  <div class="input-group" title="Set the password everyone who wants to join your server has to enter. This setting is optional.">
+    <span class="input-group-addon" id="serverPasswordLabel">Ark Server Password</span>
+    <input type="password" class="form-control" name="serverPassword" ng-model="server.serverPassword" placeholder="When people join the server, this pw is required" aria-describedby="serverPasswordLabel">
+  </div>
+  <div class="input-group" title="Set the password for admin funcitonality on the Ark Server.">
+    <span class="input-group-addon" id="serverAdminPasswordLabel">Ark Server Admin Password *</span>
+    <input type="password" class="form-control" name="serverAdminPassword" ng-model="server.serverAdminPassword" placeholder="The admin password for the ark server" aria-describedby="serverAdminPasswordLabel" required>
+  </div>
+  <div class="input-group" title="Set the maximum number of allowed players on your server. Amount should be limited according to your hardware and bandwidth.">
+    <span class="input-group-addon" id="maxPlayersLabel">Max Players</span>
+    <input type="number" min="0" max="64" class="form-control" name="maxPlayers" ng-model="server.maxPlayers" placeholder="Maximum number of players allowed on server" aria-describedby="maxPlayersLabel">
+  </div>
+  <div class="input-group" title="You can define a backup path on your server. If set, the save games of Ark will be backed up in zip files with the timestamp here.">
+    <span class="input-group-addon" id="backupPathLabel">Ark Server Backup Path</span>
+    <input type="text" class="form-control" name="backupPath" ng-model="server.backupPath" placeholder="If set, ark server saves will be backed up here" aria-describedby="backupPathLabel">
+  </div>
+  <div class="input-group userConfig" title="If you want to change the admin username, you can login to this Ark Server Manager, enter the new name here and enter the password below.">
+    <span class="input-group-addon" id="usernameLabel">Admin Username</span>
+    <input type="text" class="form-control" name="username" ng-model="user.username" placeholder="Set if admin username shall be updated" aria-describedby="usernameLabel">
+  </div>
+  <div class="input-group" title="If you want to change your Ark Server Manager Admin username or password, you also have to provide your old password again.">
+    <span class="input-group-addon" id="oldPasswordLabel">Old Password</span>
+    <input type="password" class="form-control" name="oldPassword" ng-model="user.oldPassword" placeholder="Set if admin pw or username shall be updated" aria-describedby="oldPasswordLabel">
+  </div>
+  <div class="input-group" title="If you want to change your Ark Server Manager Password, pleaser enter the new password here and also set the old password.">
+    <span class="input-group-addon" id="newPasswordLabel">New Password</span>
+    <input type="password" class="form-control" name="newPassword" ng-model="user.newPassword" placeholder="Set if admin password shall be updated" aria-describedby="newPasswordLabel">
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" ng-click="close()">Close</button>
+  <button type="button" class="btn btn-primary" ng-click="save()">Save changes</button>
+</div>

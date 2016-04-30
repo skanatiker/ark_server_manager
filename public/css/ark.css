@@ -1,0 +1,80 @@
+body {
+	padding-top: 10px;
+}
+
+.logo, .login {
+	text-align: center;
+}
+
+.login .input-group {
+	margin: auto;
+}
+
+.login .input-group-addon {
+	width: 8em;
+}
+
+.login .form-control {
+	width: 15em;
+}
+
+#logout {
+	cursor: pointer;
+	font-size: 8pt;
+}
+
+.commandButtons {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.commandButtons .btn {
+	width: 19%;
+}
+
+#log {
+	width: 100%;
+	background-color: slategrey;
+    color: floralwhite;
+}
+
+.memory {
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+.offset {
+	margin-top: 15px;
+}
+
+.error {
+	color: #ee5f5b;
+}
+
+.glyphicon-off {
+	color: #ee5f5b;
+}
+
+.glyphicon-hourglass {
+	color: #f89406;
+}
+
+.glyphicon-thumbs-up {
+	color: #62c462;
+}
+
+.configBody .input-group-addon {
+	width: 15em;
+}
+
+.configBody .input-group {
+	width: 100%;
+}
+
+.configBody .form-control {
+	width: 100%;
+}
+
+.userConfig {
+	margin-top: 20px;
+}

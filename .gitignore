@@ -1,0 +1,6 @@
+le/acme-challenge/*
+le/etc/*
+data
+.DS_Store
+node_modules
+public/scripts/maps
