@@ -21,7 +21,7 @@ This Ark Server Manager provides the following functionality via a Web Interface
 - `git clone https://github.com/skanatiker/ark_server_manager` to download the program
 - `npm install` to load all required dependencies
 - `node server.js` to start the server
-- Go to `https://<server ip or dns name>:3001`. Currently you have to accept the certificate, because it is not valid at the moment. See next section about HTTPS. Then login with default username `admin` and password `admin`.
+- Go to `https://<server ip or dns name>:3001`. The first call will take a while, don't worry. Currently you have to accept the certificate, because it is not valid at the moment. See next section about HTTPS. Then login with default username `admin` and password `admin`.
 - After your first login the configuration dialog will open up. Please configure all required fields and change your admin password! 
 
 ## HTTPS
@@ -37,3 +37,11 @@ As soon as it is available, you will also have to configure your ports a bit dif
 This server manager has been developed with the intention of playing on a private server with some friends. The server shall not be running all the time. It'll only be started, when someone actually wants to play. For avoiding SSH connections to the server and the execution of shell scripts manually, i created the server manager. All my friends can login to the web interface and can quickly see whether the server is up and running and if it is not running they can simply start and later on stop server.
 
 Perhaps there are other usecases for it. Just let me know :)
+
+## What's next
+I've created a [Trello Board](https://trello.com/b/UeYwnWGy/ark-server-manager), where i collect new feature ideas and everyone can vote for these features to identify the most important ones.
+
+## Technology Insight
+For all the developers out there, i also want to give a short overview on what i used for the Development. Basically it is a Nodejs Express application. The REST services and websockets are secured via JWT. I used [express-jwt]() and [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) for this. The SSL handling for HTTPS is done via [letsencrypt-express](https://github.com/Daplie/letsencrypt-express). [NEDB](https://github.com/louischatriot/nedb) has been used for persistence, which uses the MongoDB API, but can be run embedded in the node server.
+
+The frontend is written with AngularJS.
