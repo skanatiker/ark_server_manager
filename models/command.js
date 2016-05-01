@@ -68,8 +68,11 @@ exports.updateServer = function(wss, followUpFunction) {
   if (!isUpdating && !isStarting){
     isUpdating = true;
     configs.findByKey('server', function(err, serverConfig) {
-      var updateProcess = spawn(__dirname + '/../scripts/update_ark.sh', 
-        [serverConfig.data.arkServerPath, serverConfig.data.backupPath], 
+      var args = [serverConfig.data.arkServerPath];
+      if (serverConfig.data.backupPath) {
+        args.push(serverConfig.data.backupPath);
+      }
+      var updateProcess = spawn(__dirname + '/../scripts/update_ark.sh', args, 
         {cwd: serverConfig.data.steamCmdPath});
       wss.broadcast('log', {log: "" + "server update has been triggered ..."});
       updateProcess.stdout.on('data', 
