@@ -33,6 +33,9 @@ As soon as it is available, you will also have to configure your ports a bit dif
 `sudo iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 3000`
 `sudo iptables -t nat -I PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 3001`
 
+## Support and Feedback
+If any questions come up or you just want to give some feedback about the server, please don't hesitate to contact me via [skanatiker.dev@gmail.com](mailto:skanatiker.dev@gmail.com).
+
 ## Intention of this server manager
 This server manager has been developed with the intention of playing on a private server with some friends. The server shall not be running all the time. It'll only be started, when someone actually wants to play. For avoiding SSH connections to the server and the execution of shell scripts manually, i created the server manager. All my friends can login to the web interface and can quickly see whether the server is up and running and if it is not running they can simply start and later on stop server.
 
