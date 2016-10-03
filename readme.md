@@ -9,10 +9,10 @@ This Ark Server Manager provides the following functionality via a Web Interface
 - **Backup** Ark Server Save Game
 
 The following image shows the interface.
-![Screenshot of Web Interface](https://github.com/skanatiker/ark_server_manager/screenshots/main.png)
+![Screenshot of Web Interface](screenshots/main.png?raw=true)
 
 The following configurations can be done in the Web Interface.
-![Screenshot of Configuration](https://github.com/skanatiker/ark_server_manager/screenshots/config.png)
+![Screenshot of Configuration](screenshots/config.png?raw=true)
 
 In the scripts folder, shell scripts can be found, that actually do the execution. You can modify those files, if you want the server to be started with other or additional parameters, etc.
 
