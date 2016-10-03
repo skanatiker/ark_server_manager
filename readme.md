@@ -8,10 +8,20 @@ This Ark Server Manager provides the following functionality via a Web Interface
 - **Status** of the Ark Server (is it up and running?)
 - **Backup** Ark Server Save Game
 
+The following image shows the interface.
+![Screenshot of Web Interface](https://github.com/skanatiker/ark_server_manager/screenshots/main.png)
+
+The following configurations can be done in the Web Interface.
+![Screenshot of Configuration](https://github.com/skanatiker/ark_server_manager/screenshots/config.png)
+
+In the scripts folder, shell scripts can be found, that actually do the execution. You can modify those files, if you want the server to be started with other or additional parameters, etc.
+
 ## Prerequisite
 
 - **Linux** (so far only tested on Ubuntu, but all Unix-based systems could work)
-- **Nodejs** (https://nodejs.org/en/download/ or install via package manager of your OS, e.g. `apt-get install node` on Ubuntu)
+- **Nodejs** (see [NodeJS Website](https://nodejs.org/en/download/) or install via package manager of your OS, see [NodeJS Package Manager Installation](https://nodejs.org/en/download/package-manager/). E.g. for Ubunut/Debian:
+`curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -`
+`sudo apt-get install -y nodejs`
 - **Git** (https://git-scm.com/ or install via package manager of your OS, e.g. `apt-get install git` on Ubuntu)
 - **Ark Server** must be installed and **steamcmd** must be available
 - Ports **3000** and **3001** must be accessible for everyone who shall use the web interface. It might be necessary to configure an according Port forwarding in your router.
