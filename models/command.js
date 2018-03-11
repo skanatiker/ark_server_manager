@@ -45,7 +45,7 @@ exports.startServer = function(wss) {
 
 exports.stopServer = function(wss, force) {
   if (serverPID){
-    var args = serverPID;
+    var args = '-2 ' + serverPID;
     if (force){
       args = '-9 ' + serverPID;
     }
