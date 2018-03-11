@@ -13,7 +13,7 @@ exports.startServer = function(wss) {
       var serverProcess = spawn(__dirname + '/../scripts/server_start.sh', [serverConfig.data.serverName, 
         serverConfig.data.serverPassword, serverConfig.data.serverAdminPassword, serverConfig.data.maxPlayers],
         {cwd: serverConfig.data.arkServerPath + '/ShooterGame/Binaries/Linux/'});
-      wss.broadcast('log', {log: "" + "server start has been triggeed ..."});
+      wss.broadcast('log', {log: "" + "server start has been triggered ..."});
       serverProcess.stdout.on('data', 
         function(data) {
           var log = '' + data;
